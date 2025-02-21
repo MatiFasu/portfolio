@@ -603,6 +603,10 @@
       display: flex;
       flex-direction: column-reverse;
     }
+
+    .about img {
+      display: none;
+    }  
   
     .main img {
       width: min(70%, 350px);
