@@ -12,7 +12,7 @@
   
   .wrapper {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #191c32;
     color: #fff;
   }
@@ -67,11 +67,12 @@
   .main {
     margin: 0 auto;
     width: 80vw;
-    height: 80vh;
+    min-height: 80vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2em;
+    padding-bottom: 50px;
   }
   
   h1 {
@@ -94,48 +95,78 @@
 }
 
 .experiencia h2 {
-    margin-bottom: 20px;
+    color: #7b5297; /* Color violeta de la imagen */
+    margin-bottom: 25px;
     font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.university-block h3 {
+    font-size: 20px;
+    color: #FFF;
+    margin-bottom: 15px;
     font-weight: bold;
 }
 
-.job {
-    border-left: 4px solid #007bff;
-    padding-left: 15px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+/* Línea vertical que conecta los trabajos */
+.job-timeline {
+    border-left: 2px solid #555; /* Línea lateral gris */
+    padding-left: 25px;
+    margin-left: 5px;
 }
 
-.job h3 {
-    font-size: 18px;
-    color: #007bff;
-    margin-bottom: 5px;
+.job-entry {
+    margin-bottom: 35px;
 }
 
-.job p {
-    font-size: 14px;
-    color: #CCC;
+/* Alineación de Cargo a la izquierda y Fecha a la derecha */
+.job-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: baseline;
     margin-bottom: 10px;
 }
 
-.job ul {
-    list-style: none;
-    padding-left: 10px;
-}
-
-.job ul li {
-    font-size: 14px;
-    color: #FFF;
-    margin-bottom: 5px;
-    display: flex;
-}
-
-.job ul li::before {
-    content: "•";
-    color: #007bff;
+.job-title {
     font-weight: bold;
-    margin-right: 8px;
+    font-size: 17px;
+    color: #FFF;
 }
+
+.job-date {
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFF;
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+.job-entry ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.job-entry ul li {
+    font-size: 15px;
+    color: #EEE;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Bullet point blanco personalizado */
+.job-entry ul li::before {
+    content: "•";
+    color: #FFF;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1.2em;
+    flex-shrink: 0;
+}
+
+
 
   .download-cv,
   .project-details-button {
